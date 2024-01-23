@@ -11,7 +11,7 @@ $test = new Model(
     "localhost",
     "root",
     "",
-    "db_ijowo",
+    "inft8894_db_ijowo",
     "hasil_weton"
 );
 
