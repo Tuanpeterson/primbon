@@ -237,7 +237,7 @@
 
   let hariwanita = HitungHariWanita();
   let pasaranwanita = HitungPasaranWanita();
-  let umurwanita = HitungUmurWanita();
+  let umurwanita = HitungUmurWanita(); 
 
   var pria = parseInt(haripria.split(":")[1]) + parseInt(pasaranpria.split(":")[1]);
   var wanita = parseInt(hariwanita.split(":")[1]) + parseInt(pasaranwanita.split(":")[1]);
@@ -265,14 +265,11 @@
       }
  $("#test").text("haduh")
       // Set elemen-elemen modal langsung setelah menerima data dari API
-      $("#cardhasil #cardp #haripasangan1").html("Wethon Pasangan Pertama = &nbsp;" + haripria + "&nbsp; + &nbsp;" + pasaranpria);
-      $("#hasilpasangan1").text("Hasil Wethon Pasangan Pertama=" + pria);
-      $("#haripasangan2").html("Wethon Pasangan Kedua=" + hariwanita + "+" + pasaranwanita);
-      $("#hasilpasangan2").html("Hasil Wethon Pasangan Kedua=" + wanita);
-      $("#blokhasiljodoh").html(respon.weton_jodoh);
+      $("#haripasangan1").html( haripria + "&nbsp; + &nbsp;" + pasaranpria + "&nbsp; = &nbsp;" + pria);
+      $("#haripasangan2").html( hariwanita + "&nbsp; + &nbsp;" + pasaranwanita  + "&nbsp; = &nbsp;" + wanita);
+      $("#modalHasilJudul").html(respon.weton_jodoh + "&nbsp; (" + jodoh + ")");
+      $("#blokhasiljodoh").html(respon.weton_jodoh + "&nbsp; (" + jodoh + ")");
       $("#blokdeskripsi").html(respon.deskripsi);
-      $("#haripasangan").html("Hasil = &nbsp;" + pria + "&nbsp;+ &nbsp;" + wanita + "&nbsp;=&nbsp;" + jodoh);
-
       // Gunakan fungsi modal Bootstrap untuk menetapkan konten modal
       var myModal = new bootstrap.Modal(document.getElementById('modalhasil'));
       myModal.show();
