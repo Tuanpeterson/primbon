@@ -1,0 +1,70 @@
+<div class="card mx-5 mt-5" style="background-color: rgba(255, 255, 255, 0.15); backdrop-filter: blur(5px)">
+  <div class="card-body">
+    <!-- <img src="https://i.pinimg.com/originals/2f/d4/ef/2fd4efa03bcfa908d79ec958b02b5ab5.gif" style="width: 10%;" class="rounded" alt="">
+ <img src="https://i.pinimg.com/originals/44/d6/f9/44d6f9472d6a0092fc636f0425ecb756.gif" style="width: 10%;" class="rounded " alt=""> -->
+    <div class="row">
+      <div class="col-6">
+        <div class="form-group">
+          <label>Isi Tanggal Lahir</label>
+          <input type="date" class="form-control" id="tgllahirpria" style="font-size: 20px" />
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="form-group">
+          <label>Isi Tanggal Lahir</label>
+          <input type="date" class="form-control" id="tgllahirwanita" style="font-size: 20px" />
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="form-group">
+          <button type="button" class="btn btn-primary" id="tj" onclick="TampilJodoh()">Tampilkan</button>
+          <button type="button" class="btn btn-danger"  onclick="kosongjodoh()">Reset</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Modal Body -->
+<!-- if you want to close by clicking outside the modal, delete the last endpoint:data-bs-backdrop and data-bs-keyboard -->
+<div class="modal fade" id="modalhasil" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-md" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalTitleId">Hasil</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        
+        <div class="card mx-5 mt-5" id="cardhasil" style="display: none">
+            <div class="card-body" >
+              <div class="justify-content-center align-items-center text-center mb-5">
+                <img id="pentol" src="" style="width: 10%" class="rounded" alt="" />
+              </div>
+              <div class="row text-center mb-3" style="border-bottom: 1px solid black">
+                <div class="col-6" style="border-right: 1px solid black">
+                  <p class="" id="haripasangan1" style="font-size: 15px; font-weight: bold"></p>
+                  <p class="" id="hasilpasangan1" style="font-size: 15px; font-weight: bold"></p>
+                </div>
+                <div class="col-6" style="border-left: 1px solid black">
+                  <p class="" id="haripasangan2" style="font-size: 15px; font-weight: bold"></p>
+                  <p class="" id="hasilpasangan2" style="font-size: 15px; font-weight: bold"></p>
+                </div>
+              </div>
+              <p class="" id="blokhasiljodoh" style="font-size: 20px; font-weight: bold"></p>
+              <p class="" id="haripasangan" style="font-size: 15px"></p>
+              <p class="" id="blokdeskripsi" style="font-size: 15px"></p>
+            </div>
+          </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Optional: Place to the bottom of scripts -->
+
