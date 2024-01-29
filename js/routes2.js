@@ -1,5 +1,5 @@
 var page = "pages/home";
-
+ 
 localStorage.getItem("pages") ? loadPage(localStorage.getItem("pages")) : loadPage(page);
 
 $(".link").click(function (e) {
